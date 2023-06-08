@@ -1,0 +1,140 @@
+main {
+  z-index: 0;
+}
+
+/* ============== HOME ============== */
+
+.hero-carousel {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  background-color: aqua;
+
+  position: relative;
+  top: 80px;
+
+  overflow-x: hidden;
+}
+
+.slider-options input {
+  display: none;
+}
+
+.labels {
+  display: flex;
+  gap: 2rem;
+
+  background-color: black;
+
+  padding: 20px 30px;
+
+  border-radius: 15px;
+
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+}
+
+.labels label {
+  width: 1rem;
+  height: 1rem;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  transition: all 500ms ease-in;
+}
+
+.slider-options input:nth-child(1):checked ~ .labels label:nth-child(1),
+.slider-options input:nth-child(2):checked ~ .labels label:nth-child(2),
+.slider-options input:nth-child(3):checked ~ .labels label:nth-child(3),
+.slider-options input:nth-child(4):checked ~ .labels label:nth-child(4) {
+  background-color: #000000;
+  /* box-shadow: tipo inset o sin especificar | offset-x | offset-y | blur-radius desenfoque | tamaño spread-radius | color */
+  box-shadow: 0 0 15px 10px #ffffff;
+}
+
+.carousel {
+  width: 400%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+
+  transition: all 500ms linear;
+}
+
+.slider-options input:nth-child(1):checked ~ .carousel {
+  left: 0;
+}
+.slider-options input:nth-child(2):checked ~ .carousel {
+  left: -100%;
+}
+.slider-options input:nth-child(3):checked ~ .carousel {
+  left: -200%;
+}
+.slider-options input:nth-child(4):checked ~ .carousel {
+  left: -300%;
+}
+
+.hero-carousel article {
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-1 {
+  background-image: url("https://cdn.pixabay.com/photo/2020/06/07/15/42/working-5270959_1280.jpg");
+  background-size: cover;
+}
+
+.image-2 {
+  background-image: url("https://cdn.pixabay.com/photo/2017/03/30/14/49/web-design-2188728_1280.png");
+  background-size: cover;
+}
+
+.image-3 {
+  background-image: url("https://cdn.pixabay.com/photo/2023/05/16/10/53/technology-7997258_1280.jpg");
+  background-size: cover;
+}
+
+.image-4 {
+  background-image: url("https://cdn.pixabay.com/photo/2016/09/06/11/15/maserati-gran-turismo-1648831_1280.jpg");
+  background-size: cover;
+}
+
+.description {
+  width: 90%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000b8;
+
+  color: #ffffff;
+}
+
+.description h1 {
+  font-size: 4rem;
+}
+
+.description p {
+  margin: 4rem 20rem;
+
+  font-size: xx-large;
+  text-align: center;
+}
+
+/* ============== CONTACT ============== */
+
+
